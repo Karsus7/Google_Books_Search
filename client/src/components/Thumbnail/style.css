@@ -1,0 +1,8 @@
+/* File derived from 20-MERN\01-Activities\02-Stu_Recipes\Solved\client\src\components\Thumbnail\style.css */
+div.thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 100%;
+}
