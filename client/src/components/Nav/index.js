@@ -1,4 +1,6 @@
+// Basic design for this code is from 20-MERN\01-Activities\04-Stu_AJAXFormDelete\Solved\client\src\components\Nav\Nav.js
 import React from "react";
+// { Link } allows the Nav bar links to work
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -6,23 +8,21 @@ function Nav() {
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                    Google Books
+                <Link to="/search" className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}>
+                    Google Books Search
             </Link>
             </li>
             <li className="nav-item">
                 <Link
                     to="/search"
-                    className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                >
+                    className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}>
                     Search
             </Link>
             </li>
             <li className="nav-item">
                 <Link
                     to="/saved"
-                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                >
+                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}>
                     Saved Books
             </Link>
             </li>

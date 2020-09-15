@@ -1,3 +1,4 @@
+// Code for Search page
 import React, { Component } from "react";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
@@ -33,6 +34,7 @@ class Search extends Component {
             .catch(err => console.log(err))
     };
 
+    // Much of the below code is derived from 20-MERN\01-Activities\02-Stu_Recipes\Unsolved\client\src\App.js
     render() {
         return (
             <div>
@@ -77,8 +79,7 @@ class Search extends Component {
                                             authors={book.volumeInfo.authors}
                                             link={book.volumeInfo.infoLink}
                                             description={book.volumeInfo.description}
-                                            // if no imageLinks then use placeholder image
-                                            image={book.volumeInfo.imageLinks === undefined ? "http://siddallheatingandcooling.net/_imgstore/5/1360415/thumbnail/FSeY96wEdX_eY4XkBN2jfYnuY9A.png" : `${book.volumeInfo.imageLinks.thumbnail}`}
+                                            image={book.volumeInfo.imageLinks.thumbnail}
                                         />);
                                 })}
                             </BookList>

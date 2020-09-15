@@ -1,3 +1,5 @@
+// Basic code taken from 18-React\01-Activities\23-Stu_PupsterApp\Solved\src\pages\Search.js
+// Provides the code for the Saved page, to be exported to App.js
 import React, { Component } from "react";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
@@ -5,17 +7,18 @@ import { BookList, BookListItem } from "../components/List";
 
 class Save extends Component {
 
-    // instantiate state for saved books
+    // state is an empty array provided for savedBooks
     state = {
         savedBooks: []
     };
 
     // loads saved books when Saved page loads
+    // Taken from 18-React\01-Activities\20-Stu_AJAX\Solved\src\components\OmdbContainer.js
     componentDidMount() {
         this.loadBooks();
     };
 
-    // loads books from database
+    // "event" required due to syntax, not actually doing anything
     loadBooks = event => {
 
         API.getBooks()
@@ -36,6 +39,7 @@ class Save extends Component {
                             <BookList>
                                 {this.state.savedBooks.map(book => {
                                     return (
+                                        // List of saved books details
                                         <BookListItem
                                             key={book._id}
                                             title={book.title}

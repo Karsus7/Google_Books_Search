@@ -1,3 +1,5 @@
+// The design for this file came from 20-MERN\04-Supplemental\create-react-express\client\src\App.js
+// I used page files, and components rather than App.css for this file
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav"
@@ -13,11 +15,10 @@ class App extends Component {
           <Nav />
           <Jumbotron />
           <Switch>
-            {/* renders the Search page when "/" route is hit */}
+            {/* The two lines below insure that the Buttons to the search page work */}
             <Route exact path="/" component={Search} />
-            {/* renders the Search page when "/search" route is hit */}
             <Route exact path="/search" component={Search} />
-            {/* renders the Saved page when "/saved" route is hit */}
+            {/* renders the Saved page when the "Saved Books button is pressed" */}
             <Route exact path="/saved" component={Saved} />
           </Switch>
         </div>

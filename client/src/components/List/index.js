@@ -1,3 +1,4 @@
+// Much of the code for this file came from: 20-MERN\01-Activities\02-Stu_Recipes\Unsolved\client\src\components\RecipeList\index.js
 import React from "react";
 import Thumbnail from "../Thumbnail";
 import { Container, Row, Col } from "../Grid";
